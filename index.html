@@ -156,7 +156,8 @@
   }
 
   .paperlinks { margin-top: 4px; }
-  .paperlinks .sep { color: #bbb; padding: 0 3px; }
+  .paperlinks .sep,
+  .projlinks .sep { color: #bbb; padding: 0 3px; }
 
   /* ---------- simple two-column lists ---------- */
 
@@ -321,7 +322,11 @@
         <p>
           Before KAIST, I studied probability and statistics at
           <a href="https://ucsd.edu/">UCSD</a>, worked as a data and AI consultant at KPMG Korea,
-          and founded Rimbic, an AI hardware startup.
+          and co-founded Rimbic, an AI hardware startup.
+        </p>
+        <p>
+          I am currently building <a href="https://finnote.io/">Finnote</a>, an investment research service
+          that connects answers to source passages in DART and SEC filings.
         </p>
         <p>
           Feel free to contact me if you are interested in my research or projects!
@@ -347,7 +352,7 @@
         <strong>M.S. in Data Science</strong>, KAIST
         <span class="detail">
           Advised by <a href="https://kirc.kaist.ac.kr/index.html">Prof. Mun Yong Yi</a>, College of Engineering.<br>
-          Thesis: <em>Every Answer Has Its Own Path: Agentic Routing for Retrieval-Augmented Table Question Answering</em>.
+          Thesis: <em>Every Answer Has Its Own Path: Agentic Routing for Retrieval-Augmented Table Question Answering</em> (EMNLP 2026 Main).
         </span>
       </div>
     </div>
@@ -373,7 +378,10 @@
     <div>
       <span class="papertitle">Every Answer Has Its Own Path: Agentic Routing for Retrieval-Augmented Table Question Answering</span>
       <div class="authors"><span class="me">A Young Kim</span>, Jisu Shin, Donghee Han, Mun Yong Yi</div>
-      <div class="venue">Conference on Empirical Methods in Natural Language Processing (EMNLP) 2026, Main Conference</div>
+      <div class="venue">Conference on Empirical Methods in Natural Language Processing (EMNLP) 2026, Main Conference <span class="status">(accepted)</span></div>
+      <div class="paperlinks">
+        <a href="https://github.com/ayoung206/ATR" aria-label="ATR source code on GitHub">code</a><span class="sep">/</span><a href="https://drive.google.com/file/d/1bQ15N1V2QoZvwAH84rEWauFfTfapjJQt/view?usp=sharing" aria-label="Read the ATR paper">paper</a>
+      </div>
     </div>
   </div>
 
@@ -387,7 +395,7 @@
     <div>
       <span class="papertitle">SAFE: A Plug-and-Play Framework for Prompt Optimization in Text-to-Image Safety</span>
       <div class="authors">Jisu Shin, Sol Lee, Sungrae Hong, <span class="me">A Young Kim</span>, Mun Yong Yi</div>
-      <div class="venue">Conference on Empirical Methods in Natural Language Processing (EMNLP) 2026, Main Conference</div>
+      <div class="venue">Conference on Empirical Methods in Natural Language Processing (EMNLP) 2026, Main Conference <span class="status">(accepted)</span></div>
     </div>
   </div>
 
@@ -425,27 +433,43 @@
     </div>
   </div>
 
-  <!-- ============ PROJECTS ============ -->
-  <h2>Projects</h2>
+  <!-- ============ RESEARCH EXPERIENCE ============ -->
+  <h2>Research experience</h2>
   <div class="rows">
     <div class="row">
-      <div class="when">2026 - present</div>
+      <div class="when">Sep 2024 - Aug 2026</div>
       <div class="what">
-        <strong>Finnote</strong><span class="projlinks"><a href="https://finnote.io">finnote.io</a></span>
+        <strong>Graduate Researcher</strong>, KAIST
+        <span class="topic">Agentic RAG and LLM Recommendation</span>
+        <span class="detail">Advised by <a href="https://kirc.kaist.ac.kr/index.html">Prof. Mun Yong Yi</a>.</span>
         <ul class="bullets">
-          <li>An evidence-linked research desk for retail investors covering Korean and US markets.</li>
-          <li>Every claim points back to the highlighted passage in the filing it came from, so readers check the source instead of trusting the summary.</li>
+          <li>Developed AgenticTableRAG (ATR) for hybrid table-text question answering, combining sub-query routing and evidence verification to achieve higher F1 than all evaluated baselines across three benchmarks under matched retrieval conditions.</li>
+          <li>Distilled the routing policy into a 66M-parameter student that matched 98.6% of teacher routing decisions on HybridQA, eliminated per-sub-query LLM calls for route selection, and transferred to unseen benchmarks.</li>
+          <li>Co-developed R2END to transfer LLM reasoning into a text encoder through semantic alignment, achieving the best HR@5 and NDCG@5 among evaluated methods across four recommendation datasets.</li>
         </ul>
       </div>
     </div>
     <div class="row">
-      <div class="when">2024 - 2025</div>
+      <div class="when">Sep 2024 - Dec 2025</div>
       <div class="what">
-        <strong>Rimbic</strong><span class="projlinks"><a href="https://drive.google.com/file/d/1w3N6hhBbreDtZnzEvhOd5E9haMcytZ-F/view?usp=sharing">demo</a></span>
+        <strong>Graduate Researcher</strong>, KAIST and Hankook Tire &amp; Technology
+        <span class="topic">Multimodal Fusion and Tabular-to-Image Generation</span>
         <ul class="bullets">
-          <li>An AI smart speaker pairing a real-time voice agent with on-device video generation.</li>
-          <li>Fine-tuned Stable Video Diffusion deployed on Jetson Nano and Raspberry Pi.</li>
+          <li>Implemented and trained TAMIG, a two-stage PyTorch framework fusing tire specifications, 1D mold profiles, and 2D pattern images; refined outputs with JAX-based Thera inference.</li>
+          <li>Applied AI-generated prototypes to reduce reliance on physical testing, contributing to reductions in production time and operational costs.</li>
         </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Feb 2024 - Jul 2024</div>
+      <div class="what">
+        <strong>Research Intern</strong>, Computer Vision Lab, Korea University
+        <span class="topic">Novel View Synthesis and 3D Generation</span>
+        <span class="detail">
+          Advised by <a href="https://kuaicv.com/">Prof. Sangpil Kim</a>.<br>
+          Investigated NeRF and 3D Gaussian Splatting for novel view synthesis and 3D scene representation,
+          implementing and evaluating AI watermarking methods to verify ownership of reconstructed scenes.
+        </span>
       </div>
     </div>
   </div>
@@ -454,50 +478,37 @@
   <h2>Work experience</h2>
   <div class="rows">
     <div class="row">
-      <div class="when">Jun 2024 - Jun 2025</div>
-      <div class="what">
-        <strong>Founder and AI Engineer</strong>, Rimbic, Inc.
-        <span class="detail">Raised 47M KRW through the Preliminary Startup Package, a non-dilutive government grant, and led product, engineering, and go-to-market end to end.</span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="when">Feb 2024 - Jul 2024</div>
-      <div class="what">
-        <strong>Research Intern</strong>, Computer Vision Lab, Korea University
-        <span class="detail">
-          Advised by <a href="https://kuaicv.com/">Prof. Sangpil Kim</a>.<br>
-          Designed approaches for watermarking NeRF and 3D Gaussian Splatting scenes, targeting ownership verification of generated 3D content.
-        </span>
-      </div>
-    </div>
-    <div class="row">
       <div class="when">Dec 2021 - Nov 2023</div>
       <div class="what">
         <strong>Digital Consultant</strong>, KPMG Korea
-        <span class="detail">Four data and ML engagements across banking, agriculture, and retail, from proposal through deployment.</span>
+        <span class="detail">
+          Delivered data preparation, ML model development and deployment, and digital strategy across banking, agriculture, and retail.
+          Authored proposals and presented directly to senior client decision-makers, including department directors.
+        </span>
         <ul class="subprojects">
           <li>
             <span class="client">NongHyup, N-Hub big data platform.</span>
-            Time-series models forecasting price and production for six agricultural commodities,
-            trained in TensorFlow and served off Hadoop through Hive and Impala.
+            Built an Apache Hadoop data mart using Hive and Impala, and developed TensorFlow models for agricultural price forecasting.
+            Led the planning of a HanaroMart analytics service for store managers, from client meetings and service design
+            to visualization engineering coordination and rollout presentations.
             <span class="dates">Mar 2023 - Nov 2023</span>
           </li>
           <li>
             <span class="client">Major bank, surplus fund analysis.</span>
-            Designed and built the data marts behind SQL reporting and business status
-            visualization for special account surplus fund management.
-            <span class="dates">Dec 2022 - Jan 2023</span>
+            Designed a scalable SQL data mart for special account surplus fund analysis and customized dashboards
+            for executive decision-making and operational monitoring.
+            <span class="dates">Dec 2022 - Feb 2023</span>
           </li>
           <li>
             <span class="client">Major bank, MyData recommender.</span>
-            Clustering-based customer segmentation driving personalized wealth management and
-            product recommendations, deployed to 3.55M+ customers.
+            Developed transaction-based customer clustering and recommendations for wealth management and banking products,
+            contributing to the bank's MyData service reaching 3.55M+ users.
             <span class="dates">Aug 2022 - Dec 2022</span>
           </li>
           <li>
             <span class="client">NongHyup, NH big data platform.</span>
-            Production simulation models for smart farms, plus store-type clustering and profiling
-            across the HanaroMart retail network.
+            Built prediction models for smart-farm simulation, clustered and visualized HanaroMart store types,
+            and analyzed product affinities to profile stores and their sales patterns.
             <span class="dates">Dec 2021 - May 2022</span>
           </li>
         </ul>
@@ -507,7 +518,37 @@
       <div class="when">Mar 2020 - Nov 2020</div>
       <div class="what">
         <strong>Software Engineer</strong>, LG Electronics North America
-        <span class="detail">Automated 100+ regression tests across network, connectivity, and battery scenarios for mobile devices.</span>
+        <ul class="bullets">
+          <li>Built Python regression suites covering 100+ network, connectivity, and battery scenarios across mobile-device configurations, expanding automated release validation and reducing manual testing.</li>
+          <li>Authored model-specific test plans, reproduced defects, and documented traceable evidence for engineering teams to diagnose and resolve regressions before release.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PROJECTS ============ -->
+  <h2>Projects</h2>
+  <div class="rows">
+    <div class="row">
+      <div class="when">Mar 2026 - Present</div>
+      <div class="what">
+        <strong>Finnote</strong><span class="projlinks"><a href="https://finnote.io/">finnote.io</a></span>
+        <span class="topic">Founder and AI Engineer</span>
+        <ul class="bullets">
+          <li>Develop an investment research service that turns DART and SEC filings into verifiable answers linked to exact source passages, applying ATR's query routing and evidence verification methods.</li>
+          <li>Lead product direction and the filing pipeline from ingestion and extraction through retrieval, citation tracking, and interface design; build workflows for investor reports and Instagram visual briefings.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Jun 2024 - Jun 2025</div>
+      <div class="what">
+        <strong>Rimbic</strong><span class="projlinks"><a href="https://github.com/Rimbic/rume" aria-label="Rume source code on GitHub">code</a><span class="sep">/</span><a href="https://drive.google.com/file/d/1w3N6hhBbreDtZnzEvhOd5E9haMcytZ-F/view?usp=sharing">demo</a></span>
+        <span class="topic">Co-founder and AI Engineer</span>
+        <ul class="bullets">
+          <li>Built Rume, a standalone AI smart speaker that proactively engages users, combining a low-latency voice agent using OpenAI Realtime API and Agora with a fine-tuned Stable Video Diffusion model and Jetson Nano and Raspberry Pi hardware.</li>
+          <li>Secured KRW 47M through the government's Pre-Entrepreneurship Package and led product development, hardware-software integration, and go-to-market execution.</li>
+        </ul>
       </div>
     </div>
   </div>
